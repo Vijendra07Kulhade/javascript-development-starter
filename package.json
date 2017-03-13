@@ -1,11 +1,12 @@
 {
   "name": "javascript-development-starter",
   "version": "1.0.0",
-  "description": "JavaScript development environment Pluralsight course by Cory House",
+  "description": "JavaScript development environment learned from  Pluralsight course by Cory House",
   "scripts": {
-    "start": "node buildScript/sim.js"
+    "start": "babel-node buildScript/sim.js",
+    "securtiy-check": "nsp check"
   },
-  "author": "Cory House",
+  "author": "Viejndra Kulhade",
   "license": "MIT",
   "dependencies": {
     "whatwg-fetch": "1.0.0"
