@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "JavaScript development environment learned from  Pluralsight course by Cory House",
   "scripts": {
-    "start": "babel-node buildScript/sim.js",
-    "securtiy-check": "nsp check"
+    "start": "npm-run-all --parallel  securtiy-check lint:watch open:src test:watch",
+    "open:src": "babel-node buildScript/sim.js",
+    "securtiy-check": "nsp check",
+    "lint": "esw webpack.config.* src buildScript --color",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress buildScript/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Viejndra Kulhade",
   "license": "MIT",
